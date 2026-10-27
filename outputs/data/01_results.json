@@ -1,0 +1,22 @@
+{
+  "layer": "h.0.mlp.c_fc.weight",
+  "shape": [
+    768,
+    3072
+  ],
+  "n_elements": 2359296,
+  "n_unique_fp32_values": 2327217,
+  "fp32_bits_per_value": 32,
+  "fp32_decimal_digits": 7,
+  "min": -2.3516039848327637,
+  "max": 5.254800796508789,
+  "std": 0.14128759503364563,
+  "absmax": 5.254800796508789,
+  "absmax_over_std": 37.192230224609375,
+  "int8_levels": 256,
+  "int4_levels": 16,
+  "int8_rel_error": 0.013391613028943539,
+  "int4_rel_error": 0.21941764652729034,
+  "int8_snr_db": 37.463351607731745,
+  "int4_snr_db": 13.17457475824167
+}

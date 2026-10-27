@@ -1,0 +1,14 @@
+{
+  "outlier_scale": 50.0,
+  "range_stretch": 50.0,
+  "distinct_codes_ordinary_per_tensor": 6,
+  "distinct_codes_ordinary_per_channel": 255,
+  "ordinary_relerr_int8_per_tensor": 0.5387466549873352,
+  "ordinary_relerr_int8_per_channel": 0.034087084233760834,
+  "ratio_int8": 15.805008468684012,
+  "ordinary_relerr_int4_per_tensor": 1.0,
+  "ordinary_relerr_int4_per_channel": 0.1444123238325119,
+  "ratio_int4": 6.92461677411819,
+  "real_c_fc_int4_per_tensor_relerr": 0.9476940631866455,
+  "real_c_fc_int4_per_channel_relerr": 0.21941764652729034
+}

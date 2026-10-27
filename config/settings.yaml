@@ -1,0 +1,28 @@
+# Central configuration for quantization_101.
+# Read via src/config.py (pydantic-settings). Keep notebooks free of magic numbers.
+
+seed: 0
+
+# Bit-widths explored across notebooks and the arena.
+bit_widths: [8, 4]
+
+# Default granularity / scheme for the "good" path.
+granularity: per_channel   # per_tensor | per_channel
+channel_axis: 1            # reduce in-features -> one scale per output channel
+scheme: absmax            # absmax (symmetric) | zeropoint (asymmetric)
+
+# Outlier handling.
+clip_percentile: 99.9      # clip |w| above this percentile
+clip_sigma: 6.0            # alternative: clip beyond mean +/- n*sigma
+outlier_sigma: 6.0         # threshold for flagging outliers
+
+# Small model for end-to-end downstream quality (notebooks only; tests use TinyMLP).
+# distilgpt2 is CPU-fast yet has 768-wide matrices with authentic heavy-tailed channels.
+model_name: distilgpt2
+
+# Seeded synthetic matrix with a planted outlier (known truth for assertions).
+synthetic:
+  rows: 256
+  cols: 256
+  outlier_scale: 10.0      # the planted value is this * the ordinary std
+  n_outliers: 1

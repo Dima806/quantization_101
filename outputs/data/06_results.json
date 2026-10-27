@@ -1,0 +1,19 @@
+{
+  "evidence": {
+    "int8 reconstruction error (real matrix)": "1.34%",
+    "int8 downstream logit cosine": "0.99990",
+    "int8 perplexity vs fp32": "188.5 vs 184.8",
+    "outlier: ordinary codes used (per-tensor)": "6 / 256",
+    "outlier: per-tensor vs per-channel error": "16x worse",
+    "clipping: error before vs after": "21.5% -> 1.0%",
+    "activation per-row vs weight per-row": "18.4% vs 1.7%",
+    "int4 per-channel vs per-tensor perplexity": "534 vs 6341",
+    "memory: int8 / int4": "0.25x / 0.13x"
+  },
+  "defaults_examples": {
+    "0.5x budget": "int8 per-channel \u2014 nearly free, do it by default",
+    "0.25x budget": "int8 per-channel \u2014 nearly free, do it by default",
+    "0.125x budget": "int4 per-channel + outlier handling; keep embeddings higher precision; expect a quality cost",
+    "0.06x budget": "sub-4-bit / calibration-based (GPTQ, AWQ) territory \u2014 see extensions"
+  }
+}

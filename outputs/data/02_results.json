@@ -1,0 +1,18 @@
+{
+  "layer": "h.0.mlp.c_fc.weight",
+  "shape": [
+    768,
+    3072
+  ],
+  "scale_example": 0.04137638583779335,
+  "bytes_fp32": 9437184,
+  "bytes_int8": 2359296,
+  "bytes_int4": 1179648,
+  "relerr_int8_absmax": 0.013391613028943539,
+  "relerr_int8_zeropoint": 0.011040754616260529,
+  "relerr_int4_absmax": 0.21941764652729034,
+  "relerr_int4_zeropoint": 0.17976151406764984,
+  "downstream_logit_cosine_int8": 0.999928891658783,
+  "next_token_fp32": " single",
+  "next_token_int8": " single"
+}

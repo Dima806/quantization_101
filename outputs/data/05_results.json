@@ -1,0 +1,40 @@
+{
+  "quality": [
+    {
+      "config": "fp32",
+      "bits": 32,
+      "logit_cosine": 1.0,
+      "perplexity": 184.78103399578757
+    },
+    {
+      "config": "int8 per-channel",
+      "bits": 8,
+      "logit_cosine": 0.9998950958251953,
+      "perplexity": 188.54981449202128
+    },
+    {
+      "config": "int4 per-channel",
+      "bits": 4,
+      "logit_cosine": 0.9912103414535522,
+      "perplexity": 533.9494086173955
+    },
+    {
+      "config": "int4 per-tensor (naive)",
+      "bits": 4,
+      "logit_cosine": 0.9747609198093414,
+      "perplexity": 6341.172177105816
+    }
+  ],
+  "total_params": 81912576,
+  "quantizable_2d_params": 81851136,
+  "memory_mib": {
+    "fp32": 312.4716796875,
+    "int8": 78.293701171875,
+    "int4": 39.2640380859375
+  },
+  "memory_ratio_int8": 0.2505625509811827,
+  "memory_ratio_int4": 0.12565630947804646,
+  "reference_max_abs_diff": 0.0,
+  "reference_quant_step": 0.029829038307070732,
+  "fp32_forward_ms": 85.32485920004547
+}
